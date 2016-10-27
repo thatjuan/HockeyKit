@@ -916,6 +916,9 @@ static NSString *kHockeyErrorDomain = @"HockeyErrorDomain";
   BWHockeyLog(@"API Server Call: %@, calling iOS with %@", hockeyAPIURL, iOSUpdateURL);
   BOOL success = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iOSUpdateURL]];
   BWHockeyLog(@"System returned: %d", success);
+
+  exit(0);
+  
   return success;
 }
 
