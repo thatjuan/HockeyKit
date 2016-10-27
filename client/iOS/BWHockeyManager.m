@@ -28,6 +28,7 @@
 #import "UIImage+HockeyAdditions.h"
 #import <sys/sysctl.h>
 #import <Foundation/Foundation.h>
+#import "FDUniqueDeviceIdentifier.h"
 
 // API defines - do not change
 #define BETA_DOWNLOAD_TYPE_PROFILE	@"profile"
