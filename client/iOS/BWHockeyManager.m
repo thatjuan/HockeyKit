@@ -237,14 +237,17 @@ static NSString *kHockeyErrorDomain = @"HockeyErrorDomain";
 }
 
 - (NSString *)deviceIdentifier {
-  if ([delegate_ respondsToSelector:@selector(customDeviceIdentifier)]) {
-    NSString *identifier = [delegate_ performSelector:@selector(customDeviceIdentifier)];
-    if (identifier && [identifier length] > 0) {
-      return identifier;
-    }
-  }
+
+  return FDUniqueDeviceIdentifier();
+
+  // if ([delegate_ respondsToSelector:@selector(customDeviceIdentifier)]) {
+  //   NSString *identifier = [delegate_ performSelector:@selector(customDeviceIdentifier)];
+  //   if (identifier && [identifier length] > 0) {
+  //     return identifier;
+  //   }
+  // }
   
-  return @"invalid";
+  // return @"invalid";
 }
 
 - (NSString *)authenticationToken {
